@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 16:14:22 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/05/06 16:21:50 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/05/06 16:32:42 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ class FragTrap : public ClapTrap
 		FragTrap(std::string name);
 		FragTrap(const FragTrap &other);
 		virtual ~FragTrap();
-		FragTrap &operator=(const FragTrap &other);
+		FragTrap	&operator=(const FragTrap &other);
 
-		void highFivesGuys(void);
+		void		highFivesGuys(void);
+		void 		attack(const std::string &target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 14:05:57 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/05/06 15:26:20 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/05/06 16:36:56 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int main()
 {
-	ScavTrap	scavTest("scavTest");
-	ClapTrap	clapTest("clapTest");
+	ScavTrap	scavTest("SCAVTEST");
+	ClapTrap	clapTest("CLAPTEST");
 
 	std::cout << std::endl
 		<< "(Now let's try attacking with ScavTrap and see what happens)"
 		<< std::endl;
-	scavTest.attack("clapTest");
+	scavTest.attack("CLAPTEST");
 	clapTest.takeDamage(20);
 	clapTest.beRepaired(10);
 
@@ -33,7 +33,7 @@ int main()
 	scavTest.beRepaired(15);
 	scavTest.takeDamage(100);
 	scavTest.guardGate();
-	scavTest.attack("clapTest");
+	scavTest.attack("CLAPTEST");
 
 	return (0);
 }

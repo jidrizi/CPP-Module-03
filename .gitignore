@@ -3,6 +3,7 @@ bin
 .vscode
 ClapTrap
 ScavTrap
+FragTrap
 
 # Prerequisites
 *.d

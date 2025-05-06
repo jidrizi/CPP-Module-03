@@ -8,7 +8,7 @@ BIN_DIR = bin
 
 OBJS = $(SRCS:%.cpp=$(BIN_DIR)/%.o)
 
-NAME = ScavTrap
+NAME = FragTrap
 
 all: $(NAME)
 

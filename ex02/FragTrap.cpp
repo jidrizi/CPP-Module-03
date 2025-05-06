@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 16:21:42 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/05/06 16:28:46 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/05/06 16:38:26 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,37 @@ FragTrap::~FragTrap()
 	std::cout << "FragTrap destructor called" << std::endl;
 }
 
-void FragTrap::highFivesGuys(void)
+void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "Pause!" <<std::endl
-		<< "FragTrap  "<< this->name << " is readying his hand and requesting a high five!"
+	if (this->hitPoints > 0)
+	{
+		std::cout << "Pause!" <<std::endl
+			<< "FragTrap  "<< this->name << " is readying his hand and requesting a high five!"
+			<< std::endl;
+	}
+	else if (this->hitPoints <= 0)
+	{
+		std::cout << "FragTrap " << this->name << " is dead and can't high five from the grave!"
+			<< std::endl;
+	} 
+}
+
+void	FragTrap::attack(std::string const &target)
+{
+	if (this->hitPoints > 0 && this->energyPoints > 0)
+	{
+		std::cout << "FragTrap " << this->name << " attacks " << target
+			<< ", causing " << this->attackDamage << " points of damage!" << std::endl;
+		this->energyPoints--;
+	}
+	else if (this->hitPoints <= 0)
+	{
+		std::cout << "FragTrap " << this->name << " is dead and can't attack!"
 		<< std::endl;
+	}
+	else if (this->energyPoints <= 0)
+	{
+		std::cout << "FragTrap " << this->name << " is out of energy and can't attack!"
+		<< std::endl;
+	}
 }
