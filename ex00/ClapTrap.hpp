@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 13:40:27 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/05/06 14:01:33 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/05/06 14:12:14 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 class ClapTrap
 {
 	std::string		name;
-	int				hitPoints;
-	int				energyPoints;
-	int				attackDamage;
+	unsigned int	hitPoints;
+	unsigned int	energyPoints;
+	unsigned int	attackDamage;
 
 	public:
 		ClapTrap();
