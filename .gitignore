@@ -1,3 +1,7 @@
+#Non git template stuff
+bin
+Claptrap
+
 # Prerequisites
 *.d
 
