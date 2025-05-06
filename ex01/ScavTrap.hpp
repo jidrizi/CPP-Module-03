@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 14:36:02 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/05/06 15:09:43 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/05/06 15:25:13 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : protected ClapTrap
+class ScavTrap : public ClapTrap
 {
 	private:
 		bool gateKeeperMode;

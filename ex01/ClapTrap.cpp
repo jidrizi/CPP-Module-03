@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Claptrap.cpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 13:45:11 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/05/06 14:29:12 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/05/06 15:29:31 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	if (this->hitPoints > 0)
 	{
 		this->hitPoints -= amount;
-		if (this->hitPoints < 0)
+		if (this->hitPoints <= 0)
 			this->hitPoints = 0;
 		std::cout << name << " takes " << amount
 			<< " points of damage! Hit points left: "

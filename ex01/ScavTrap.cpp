@@ -6,12 +6,11 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 14:36:14 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/05/06 15:16:29 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/05/06 15:24:16 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
@@ -86,10 +85,13 @@ void	ScavTrap::guardGate()
 			<< std::endl;
 	}
 	else if (this->gateKeeperMode)
-		std::cout << "ScavTrap " << this->name
-			<< " is already in Gate Keeper mode." << std::endl;
-	else
-		std::cout << "ScavTrap" << this->name
-			<< " is dead and cannot enter Gate Keeper mode."
+	{
+		std::cout << "ScavTrap " << this->name << " is already in Gate Keeper mode."
 			<< std::endl;
+	}
+	else if (this->hitPoints <= 0)
+	{
+		std::cout << "ScavTrap" << this->name << " is dead and cannot enter Gate Keeper mode."
+			<< std::endl;
+	}
 }

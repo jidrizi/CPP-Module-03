@@ -1,6 +1,8 @@
 #Non git template stuff
 bin
-Claptrap
+.vscode
+ClapTrap
+ScavTrap
 
 # Prerequisites
 *.d
