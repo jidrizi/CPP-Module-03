@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 13:45:11 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/05/06 13:46:01 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/05/06 13:54:05 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,41 @@ Claptrap::ClapTrap(std::string name) : name(name)
 	std::cout << "Named constructor called" << std::endl;
 }
 
+ClapTrap::ClapTrap(const ClapTrap &other)
+{
+	std::cout << "Copy constructor called" << std::endl;
+	*this = other;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+{
+	std::cout << "Copy assignment operator called" << std::endl;
+	if (this != &other)
+	{
+		this->name = other.name;
+		this->hitPoints = other.hitPoints;
+		this->energyPoints = other.energyPoints;
+		this->attackDamage = other.attackDamage;
+	}
+	return (*this);
+}
+
+ClapTrap::~ClapTrap()
+{
+	std::cout << "Destructor called" << std::endl;
+}
+
+void	ClapTrap::attack(const std::string& target)
+{
+	if (this->hitPoints > 0 && this->energyPoints > 0)
+	{
+		std::cout << "ClapTrap " << name << " attacks " << target
+			<< ", causing " << attackDamage << " points of damage!"
+			<< std::endl;
+		this->energyPoints--;
+	}
+	else if (this->hitPoints <= 0)
+		std::cout << name << " is dead and cannot attack." << std::endl;
+	else
+		std::cout << name << " has no energy left to attack." << std::endl;
+}
