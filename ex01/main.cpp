@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 14:05:57 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/05/06 14:28:40 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/05/06 14:41:55 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,6 @@
 
 int main()
 {
-	ClapTrap	test("test");
-	ClapTrap	dummy(test);
-
-	std::cout << std::endl;
-	test.attack("dummy");
-	dummy.takeDamage(0);
-	dummy.beRepaired(0);
-	std::cout <<std::endl
-		<< "(Now let's try killing one Claptrap and see what happens)"
-		<< std::endl;
-	test.takeDamage(10);
-	test.attack("dummy");
-	test.beRepaired(10);
+	
 	return (0);
 }
